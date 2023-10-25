@@ -1,0 +1,21 @@
+.header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+  margin: 2% auto;
+  height: 5vh;
+}
+.header-content .option {
+  background-color: #e04031;
+  color: #fbe6e4;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200%;
+}
+
+/*# sourceMappingURL=Header.styles.css.map */

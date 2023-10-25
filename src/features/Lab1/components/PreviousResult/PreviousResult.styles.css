@@ -1,0 +1,12 @@
+.previousResultContent {
+  width: 50%;
+  margin: 5% auto;
+  display: flex;
+  flex-direction: column;
+}
+.previousResultContent .date {
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=PreviousResult.styles.css.map */

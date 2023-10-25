@@ -1,25 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Lab1 from "../src/features/Lab1/Lab1.components";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import InProgresPage from "../src/features/InProgresPage/InProgresPage.component";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+          <BrowserRouter>
+            <Routes>
+                <Route path="/" >
+                    <Route path="lab1" element={<Lab1 />} />
+                    <Route path="*" element={<InProgresPage />} />
+                </Route>
+            </Routes>
+          </BrowserRouter>
+      </div>
   );
 }
 
