@@ -16,6 +16,7 @@ export default function Lab1(){
     const validator : Validator = new Validator();
     const [disabled, setDisabled] = useState<boolean>(true);
     const [disabledButton, setDisabledButton] = useState<boolean>(true);
+    const [results, setResults] = useState<PseudoRandomNumbers[]>([]);
     const [errors, setErrors] = useState<Errors>(
         {mError : "m has to be more than 0 and integer",
             aError: "a has to be more than or equal to 0, less than m and integer",
@@ -24,8 +25,8 @@ export default function Lab1(){
             nError: "n has to be more than 0 and less than " + MAX_N}
     );
 
-    const [results, setResults] = useState<PseudoRandomNumbers[]>([]);
-    const Submit = () => {
+
+    const GetResult = () => {
         const newResult : PseudoRandomNumbers = {
             m : Number(form.getFieldValue("m")),
             a : Number(form.getFieldValue("a")),
@@ -173,7 +174,7 @@ export default function Lab1(){
                 <div className={"error"}>{errors?.mError === "" ? errors?.nError : <></>}</div>
 
                 <div className="center">
-                    <Button htmlType="submit" disabled={disabledButton} onClick={Submit}>
+                    <Button htmlType="submit" disabled={disabledButton} onClick={GetResult}>
                         Calculate
                     </Button>
                 </div>
